@@ -81,6 +81,8 @@ int main()
     }
 
     double Percentage = (double)RoomsWithMatch / Rooms * 100;
-    cout << GlobalSampleSize << " people per room, " << Rooms << " rooms" << "\n";
-    cout << RoomsWithMatch << " rooms had a shared birthday (" << Percentage << "%)" << "\n";
+    cout << "If we took " << GlobalSampleSize <<" people per room, " << "and scaled this over: " <<  Rooms << " rooms" << "\n";
+    cout << "You would find that " << RoomsWithMatch << " rooms had a shared birthday (" << Percentage << "%)" << "\n";
+    cout << "This is the birthday paradox: you'd expect to need ~183 people for 50%, but " << (GlobalSampleSize * (GlobalSampleSize - 1) / 2) << " pairs of people means many more chances to match." << "\n";
+
 }
