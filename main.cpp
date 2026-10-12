@@ -29,6 +29,7 @@ int collision(bool ShowDetails)
 {
     int VectorSampleSize = Birthdays.size();
     int duplication = 0;
+    if (ShowDetails)
     {
         cout << "Example Room:" << "\n";
         for (int i = 0; i < VectorSampleSize; i++)
@@ -72,7 +73,7 @@ int main()
     for (int i = 0; i < Rooms; i++)
     {
         dateassign();
-        int Matches = collision();
+        int Matches = collision(ShowExampleRoom && i == 0);
         if (Matches > 0)
         {
             RoomsWithMatch++;
