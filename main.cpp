@@ -31,7 +31,8 @@ int collision()
             if (Birthdays[i] == Birthdays[j])
             {
                 duplication++;
-            }
+                cout << Birthdays[i] << Birthdays[j] << "\n";
+                cout << "Person " << i + 1 << " and Person " << j + 1 << " share day " << Birthdays[i] << "\n";            }
         }
     }
     if (duplication == 1)
