@@ -1,4 +1,4 @@
-// ED CRYPT PORTFOLIO
+// ED CRYPT PORTFOLIO 12/10/2026
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -19,15 +19,19 @@ int dateassign() {
 // Collision Check
 int collision() {
     int VectorSampleSize = Birthdays.size();
+    int duplication = 0; 
     for (int i = 0; i < VectorSampleSize; i++) {
          cout << i + 1 << ": " << Birthdays[i] << "\n";
          for (int j = i + 1; j < VectorSampleSize; j++){
             if (Birthdays[i] == Birthdays[j]){
-                int duplication = 0;
-                duplication = + 1;
-                cout << duplication << "Duplication Found" << "\n";
+                duplication++ ;
             }
          }
+    }
+    if (duplication >= 2 || duplication == 0){
+            cout << duplication << " Duplications Found" << "\n";
+    } else {
+            cout << duplication << " Duplication Found" << "\n";
     }
     return 0;
 }
