@@ -12,15 +12,20 @@ int dateassign() {
         int RandomDay = rand() % 365 + 1;
         Birthdays.push_back(RandomDay);
     }
-        for (int Birthday : Birthdays ) {
-        cout << Birthday << "\n";
-    }
-    
     return 0;
 }
 
-// Main
-int main() {
-    dateassign();
+// Collision Check
+int collision() {
+    int VectorSampleSize = Birthdays.size();
+    for (int i = 0; i < VectorSampleSize; i++) {
+         cout << i + 1 << ": " << Birthdays[i] << "\n";
+    }
+    cout << "Executed Collision";
     return 0;
+}
+
+int main() {
+    dateassign(); 
+    collision();
 }
