@@ -4,7 +4,7 @@
 using namespace std;
 
 // Globals
-int GlobalSampleSize = 50; // Please alter this to the number of participants
+int GlobalSampleSize = 300; // Please alter this to the number of participants
 vector<int> Birthdays;
 
 // Date Assign
@@ -21,8 +21,14 @@ int collision() {
     int VectorSampleSize = Birthdays.size();
     for (int i = 0; i < VectorSampleSize; i++) {
          cout << i + 1 << ": " << Birthdays[i] << "\n";
+         for (int j = i + 1; j < VectorSampleSize; j++){
+            if (Birthdays[i] == Birthdays[j]){
+                int duplication = 0;
+                duplication = + 1;
+                cout << duplication << "Duplication Found" << "\n";
+            }
+         }
     }
-    cout << "Executed Collision";
     return 0;
 }
 
