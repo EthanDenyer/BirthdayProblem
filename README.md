@@ -15,3 +15,7 @@ This is a submission entry for my Cryptography & Cryptanalysis section of my por
 A 256-bit hash is generally described as providing about 128 bits of collision resistance due to the same fault emulated by the Birthday Problem. Understanding of hash collisions in randomly generated, but finite, algorithms helps cryptographers choose hash sizes and estimate how much work a collision attack would require.
 
 A collision attack is different from recovering a message from its hash, or finding a message that matches one specific hash. This simulation would help explain the collision case—and show why cryptographic output sizes need to account for the birthday effect, especially to individuals who might be learning about this for the first time. 
+
+# How was this made?
+
+This was my first ever C++ project and I coded it in around four hours. It was designed as a way to visualise the Birthday problem and add to my Cryptanalysis portfolio. I used AI to refine the boolean logic controlling the example-room display and to help scale the simulation across 10,000 rooms, giving the output a more polished presentation and demonstrating the result at larger scale. I wrote the birthday-generation and collision-detection logic myself; building that core helped me understand how the problem works, so I used AI to save time on scaling up the simulation.
