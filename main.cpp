@@ -4,7 +4,7 @@
 using namespace std;
 
 // Globals
-int GlobalSampleSize = 300; // Please alter this to the number of participants
+int GlobalSampleSize = 100; // Please alter this to the number of participants
 vector<int> Birthdays;
 
 // Date Assign
