@@ -20,7 +20,7 @@ A collision attack is different from recovering a message from its hash, or find
 
 The simulation placed 23 people in each of 10,000 rooms, gave everyone a random birthday, and counted how many rooms contained at least two people who shared one. Just over half the rooms had a match.
 
-This is surprising to most people. With 365 possible birthdays, the common instinct is that you'd need a room of around 183 people before a match became likely. The reason so few are needed is that a match can happen between any two people in the room, not just between you and someone else. With 23 people there are 253 different pairs, and every pair is another chance of a shared birthday.
+With 365 possible birthdays, the common instinct is that you'd need a room of around 183 people before a match became likely. The reason so few are needed is that a match can happen between any two people in the room, not just between you and someone else. With 23 people there are 253 different pairs, and every pair is another chance of a shared birthday.
 
 The result also matched the well-known answer for the birthday problem, which gives confidence that the simulation works as intended. Running it with larger rooms shows how quickly the chance climbs: by 50 people a shared birthday is
 almost guaranteed.
