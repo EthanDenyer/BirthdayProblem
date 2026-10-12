@@ -1,4 +1,5 @@
-// ED CRYPT PORTFOLIO 12/10/2026
+// ED CRYPT PORTFOLIO 11/10/2026
+// Last edit 12/10/2026
 #include <iostream>
 #include <vector>
 #include <cstdlib>
@@ -6,8 +7,10 @@
 using namespace std;
 
 // Globals
-int GlobalSampleSize = 100; // Please alter this to the number of participants
+int GlobalSampleSize = 23; // Please alter this to the number of participants
+bool ShowExampleRoom = true;  // When true it will print the first room in full. Good way to see how code is running / debug.
 vector<int> Birthdays;
+
 
 // Date Assign
 int dateassign()
@@ -22,10 +25,19 @@ int dateassign()
 }
 
 // Collision Check
-int collision()
+int collision(bool ShowDetails)
 {
     int VectorSampleSize = Birthdays.size();
     int duplication = 0;
+    {
+        cout << "Example Room:" << "\n";
+        for (int i = 0; i < VectorSampleSize; i++)
+        {
+            cout << "Person " << i + 1 << ": day " << Birthdays[i] << "\n";
+        }
+        cout << "\n";
+    }
+
     for (int i = 0; i < VectorSampleSize; i++)
     {
         for (int j = i + 1; j < VectorSampleSize; j++)
@@ -34,6 +46,17 @@ int collision()
             {
                 duplication++;
             }
+        }
+    }
+        if (ShowDetails)
+    {
+        if (duplication == 1)
+        {
+            cout << duplication << " Duplication Found" << "\n\n";
+        }
+        else
+        {
+            cout << duplication << " Duplications Found" << "\n\n";
         }
     }
     return duplication;
